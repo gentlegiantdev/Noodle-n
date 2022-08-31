@@ -1,7 +1,7 @@
 const { Int32 } = require('mongodb')
 const mongoose = require('mongoose')
 
-const TodoSchema = new mongoose.Schema({
+const groceryItemSchema = new mongoose.Schema({
   groceryItem: {
     type: String,
     required: true,
