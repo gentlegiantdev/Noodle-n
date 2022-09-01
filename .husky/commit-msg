@@ -1,0 +1,9 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npx --no-install commitlint --edit "$1"undefined
+npx --no-install commitlint --edit 
+npm test
+npm test
+npx --no -- commitlint --edit ""
+npx --no -- commitlint --edit ""
