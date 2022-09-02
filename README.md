@@ -39,6 +39,15 @@ Noodle'n is a Full-stack web application designed to aid your individual grocery
 - Fostering ecological sustainability.
 - Collaborating with food services in catering, restaurants, parents, and colleges.
 
+# Goals/Solutions
+### MVP
+- Create a basic app that has CRUD.
+
+### Solutions
+- Parents: allow syncing of grocery items that are 1.) already in fridge and 2.) needs purchasing.
+- Restaurant: allow restaurant owners to prioritize purchases based on cost and expiration date.
+- College Students: facilitate diverse and nutritious meal planning when grocery shopping.
+
 
 # Packages/Dependencies used 
 
