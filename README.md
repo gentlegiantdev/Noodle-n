@@ -143,3 +143,5 @@ d.) Major patches after using a `BREAKING CHANGE: ` commit:
 ```md
 ▶ npm run release:major
 ```
+
+5.) A nicely formatted list full of changes should appear in the root directory called `CHANGELOG.md`!
