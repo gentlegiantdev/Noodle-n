@@ -39,6 +39,8 @@ Noodle'n is a Full-stack web application designed to aid your individual grocery
 - Fostering ecological sustainability.
 - Collaborating with food services in catering, restaurants, parents, and colleges.
 
+---
+
 # Goals/Solutions
 ### MVP
 - Create a basic app that has CRUD.
@@ -48,8 +50,10 @@ Noodle'n is a Full-stack web application designed to aid your individual grocery
 - Restaurant: allow restaurant owners to prioritize purchases based on cost and expiration date.
 - College Students: facilitate diverse and nutritious meal planning when grocery shopping.
 
+---
+
 # Future Optimizations
-### Full-stack
+### Full-Stack
 - Improving accessibility and support for marginalized and disabled users
 - Integrating common fitness trackers and support for wearable technologies
 - Implementing Finance and Banking API support to tailor recommendations based on budget
@@ -59,11 +63,18 @@ Noodle'n is a Full-stack web application designed to aid your individual grocery
 
 ### DevOps
 - Containerizing application via Docker
-- Implementing Container Orchestrations such as Kubernetes
+- Implementing Container Orchestration such as Kubernetes
 - Implementing Infrastructure as Code technologies such as Ansible
 - Streamlining application through a CI/CD pipeline tool such as Jenkins
 - Integrating Cloud & IaaS support
 - Implementing a robust testing framework 
+- Implementing Agile workflow methodologies
+- Implementing bi-directional GitHub and Trello communication feature
+- Implementing Documentation Linting and CLI
+
+### Logistics
+- Re-framing Future Optimizations as SMART goals
+- Creating Discord server with GitHub webhook for push alerts
 
 ---
 
