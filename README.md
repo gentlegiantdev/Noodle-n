@@ -1,10 +1,6 @@
 # Introduction
 
-A Simple ToDo App is built using the MVC Architecture, we have also implemented "authorization" so folx can sign up, customize & personalize the app 
-
----
-
-> Be sure to add that lovely star 😀 and fork it for your own copy
+Noodle'n is a Full-stack web application designed to aid your individual grocery-related needs!
 
 ---
 
@@ -12,7 +8,37 @@ A Simple ToDo App is built using the MVC Architecture, we have also implemented 
 ## Who? What? Where? When? Why?
 
 - Our mission is to create a grocery shopping app that allows users to efficiently track grocery supplies before, during, and after shopping.
+
 - Users will reduce stress related to overpacked schedules and reptile grocery purchases leading to unused products.
+
+---
+
+# Project Overview
+## Time
+
+- Estimated Duration: 1 Week
+
+## Team
+
+- Full-Stack Developer
+- Front-end Specialist
+- Back-end Specialist
+- UX Designer and Researcher
+- Graphic Designer
+- DevOps
+
+---
+
+# Problem Statement
+## What problem does this application solve?
+
+- Organizing shared resources for large families.
+- Prevent wasting money and food.
+- Maximize visual appeal, aesthetics, and accessibility.
+- Making healthier dieting choices.
+- Fostering ecological sustainability.
+- Collaborating with food services in catering, restaurants, parents, and colleges.
+
 
 # Packages/Dependencies used 
 
