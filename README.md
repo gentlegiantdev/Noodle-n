@@ -44,9 +44,15 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 # Installing Husky
 1.) Follow the [Conventional Commits Guidelines](https://www.conventionalcommits.org/en/v1.0.0/).
 
-2.) Install `husky`: `npx husky-init && npm install`
+2.) Install `husky`:
+```md
+npx husky-init && npm install
+```
 
-3.) Install `commitlint`: `npm install @commitlint/{cli,config-conventional}`
+3.) Install `commitlint`:
+```md
+npm install @commitlint/{cli,config-conventional}
+```
 
 4.) Tell Husky to run `commitlint`:
 ```bash
@@ -56,13 +62,84 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 npx --no-install commitlint --edit "$1"
 ```
 
-5.) Create `.commitlintrc.json`:
+5.) Create `.commitlintrc.json` in the root directory of the project folder:
 ```bash
 {
   "extends": ["@commitlint/config-conventional"]
 }
 ```
 
-6.) Set script `husky install` and prepare to install the husky Git hook: `npm pkg set scripts.scriptname="husky install"`
+6.) Set script `husky install` and prepare to install the husky Git hook: 
+```md
+npm pkg set scripts.scriptname="husky install"
+```
 
 7.) Test making a bad commit such as `git add . ; git commit -m "this is a bad commit". If it is working properly, npm should reject the commit with reasons.
+
+# Configuring Semantic Versioning and Automatic Changelog Generator
+
+1.) Install `standard-version`
+```md
+npm i --save-dev standard-version
+```
+
+2.) Add the following declarations in the `"scripts"` rule of `package.json`:
+```json
+  "scripts": {
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch",
+    "release:major": "standard-version --release-as major"
+  },
+```
+
+3.) Create a `.versionrc.json` file in the root directory:
+```json
+{
+  "types": [
+    {"type": "feat", "section": "Features"},
+    {"type": "fix", "section": "Bug Fixes"},
+    {"type": "chore", "hidden": true},
+    {"type": "docs", "hidden": true},
+    {"type": "style", "hidden": true},
+    {"type": "refactor", "hidden": true},
+    {"type": "perf", "hidden": true},
+    {"type": "test", "hidden": true}
+  ],
+  "commitUrlFormat": "https://github.com/mokkapps/changelog-generator-demo/commits/{{hash}}",
+  "compareUrlFormat": "https://github.com/mokkapps/changelog-generator-demo/compare/{{previousTag}}...{{currentTag}}"
+}
+  
+```
+
+4.) Now it's time to release the new patch! There are 3 common situations:
+
+a.) First release: run `npm run release -- --first-release`:
+```md
+▶ npm run release -- --first-release
+
+> changelog-generator-demo@0.0.0 release /Users/mhoffman/workspace/changelog-generator-demo
+> standard-version "--first-release"
+
+✖ skip version bump on first release
+✔ created CHANGELOG.md
+✔ outputting changes to CHANGELOG.md
+✔ committing CHANGELOG.md
+✔ tagging release v0.0.0
+ℹ Run `git push --follow-tags origin master` to publish
+```
+
+b.) Bug Fix patches after using a `fix: ` commit:
+```md
+▶ npm run release:patch
+```
+
+c.) Minor patches after using a `feat: ` commit:
+```md
+▶ npm run release:minor
+```
+
+d.) Major patches after using a `BREAKING CHANGE: ` commit:
+```md
+▶ npm run release:major
+```
