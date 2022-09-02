@@ -1,13 +1,13 @@
 const { Int32 } = require('mongodb')
 const mongoose = require('mongoose')
 
-const groceryItemSchema = new mongoose.Schema({
+const GroceryItemSchema = new mongoose.Schema({
   groceryItem: {
     type: String,
     required: true,
   },
   quantity: {
-    type: Int32,
+    type: Number,
     required: true,
   },
   completed: {
@@ -20,4 +20,4 @@ const groceryItemSchema = new mongoose.Schema({
   }
 })
 
-module.exports = mongoose.model('Todo', TodoSchema)
+module.exports = mongoose.model('GroceryItem', GroceryItemSchema)
