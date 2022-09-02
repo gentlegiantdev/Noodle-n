@@ -112,7 +112,7 @@ npm i --save-dev standard-version
   
 ```
 
-4.) Now it's time to release the new patch! There are 3 common situations:
+4.) Now it's time to release the new patch! There are 4 common situations:
 
 a.) First release: run `npm run release -- --first-release`:
 ```md
