@@ -67,7 +67,7 @@ his shopping experience.
 - Fun and Vibrant
 - Nice accessibility with help option
 - Suggested List, skip option
-- Wizard walk through for rst list
+- Wizard walk through for rest of list
 - Create category, add emoji
 - Auto type feature good?
 
@@ -81,10 +81,10 @@ can’t.”
 
 # Branding
 ### Road to being the #1 Food App
-- Food a ect how we feel
-- Compulsive eating, weight gain, binging
+- Food affects how we feel
+- Address compulsive eating, weight gain, binging
 - Increase alertness, improve health, easier movement, improved body image, energy
-- Eating pattern dictate choices
+- Eating patterns dictate choices
 - Food therapy, food diary, do not skipping, encouraging snacks and treats
-- Thriving not surviving
+- Thriving, not just surviving
 - “Rewrite your food story”
