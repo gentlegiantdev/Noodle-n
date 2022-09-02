@@ -48,7 +48,6 @@ Noodle'n is a Full-stack web application designed to aid your individual grocery
 - Restaurant: allow restaurant owners to prioritize purchases based on cost and expiration date.
 - College Students: facilitate diverse and nutritious meal planning when grocery shopping.
 
-
 # Packages/Dependencies used 
 
 bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mongodb, mongoose, morgan, nodemon, passport, passport-local, validator, husky, commitlint, standard-version
