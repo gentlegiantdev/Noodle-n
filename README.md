@@ -33,8 +33,8 @@ Noodle'n is a Full-stack web application designed to aid your individual grocery
 ### What problem does this application solve?
 
 - Organizing shared resources for large families.
-- Prevent wasting money and food.
-- Maximize visual appeal, aesthetics, and accessibility.
+- Preventing waste of money and food.
+- Maximizing visual appeal, aesthetics, and accessibility.
 - Making healthier dieting choices.
 - Fostering ecological sustainability.
 - Collaborating with food services in catering, restaurants, parents, and colleges.
