@@ -204,3 +204,10 @@ d.) Major patches after using a `BREAKING CHANGE:` commit:
 ```
 
 5.) A nicely formatted list full of changes should appear in the root directory called `CHANGELOG.md`!
+
+---
+
+# Important Project Resources
+- [Project Repo](https://github.com/gentlegiantdev/Noodle-n)
+- [Figma Wireframe](https://www.figma.com/file/z9VpgLaMt4i8WGto3swMtw/GROCERY-STORE-APP)
+- [Conventional Commits Guidelines](https://www.conventionalcommits.org/en/v1.0.0/)
