@@ -42,7 +42,7 @@ Noodle'n is a Full-stack web application designed to aid your individual grocery
 
 # Packages/Dependencies used 
 
-bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mongodb, mongoose, morgan, nodemon, passport, passport-local, validator
+bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mongodb, mongoose, morgan, nodemon, passport, passport-local, validator, husky, commitlint, standard-version
 
 ---
 
