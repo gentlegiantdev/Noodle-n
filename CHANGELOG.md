@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.2](https://github.com/gentlegiantdev/Noodle-n/compare/v1.4.1...v1.4.2) (2022-09-02)
+
+
+### Features
+
+* implemented a Future Optimizations section ([7d6d57c](https://github.com/gentlegiantdev/Noodle-n/commits/7d6d57c4986859552a4ad6cffb3dd8ce8439b44d))
+* split Future Optimizations section into different branches of development and Logistics ([4bdfcef](https://github.com/gentlegiantdev/Noodle-n/commits/4bdfcef513f02bbce610ad9f8a3e84e56bc20fc0))
+
+
+### Bug Fixes
+
+* edited Future Optimizations section ([17d7b77](https://github.com/gentlegiantdev/Noodle-n/commits/17d7b77f4387461b3aa8fdcd3269e901da3cd517))
+* standardized formatting under Problem Statement ([8533dea](https://github.com/gentlegiantdev/Noodle-n/commits/8533deae3d3ccb5d8dec32fab17a2de76419aecd))
+
 ### [1.4.1](https://github.com/gentlegiantdev/Noodle-n/compare/v1.4.0...v1.4.1) (2022-09-02)
 
 
