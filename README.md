@@ -50,7 +50,7 @@ Noodle'n is a Full-stack web application designed to aid your individual grocery
 
 # Future Optimizations
 ### Full-stack
-- Improving accessibility for marginalized and disabled users
+- Improving accessibility and support for marginalized and disabled users
 - Integrating common fitness trackers and support for wearable technologies
 - Implementing Finance and Banking API support to tailor recommendations based on budget
 - Adding a calendar feature
