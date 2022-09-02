@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.3](https://github.com/gentlegiantdev/Noodle-n/compare/v1.4.2...v1.4.3) (2022-09-02)
+
+
+### Features
+
+* **commitizen:** added commitizen shield on docs and installed commitizen ([f0a3b55](https://github.com/gentlegiantdev/Noodle-n/commits/f0a3b55210bbbaa7defae51083be09c35634b7b9))
+
 ### [1.4.2](https://github.com/gentlegiantdev/Noodle-n/compare/v1.4.1...v1.4.2) (2022-09-02)
 
 
