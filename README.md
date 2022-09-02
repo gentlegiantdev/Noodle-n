@@ -118,7 +118,7 @@ a.) First release: run `npm run release -- --first-release`:
 ```md
 ▶ npm run release -- --first-release
 
-> changelog-generator-demo@0.0.0 release /Users/mhoffman/workspace/changelog-generator-demo
+> changelog-generator-demo@0.0.0 release /home/mattykyu/Noodle-n
 > standard-version "--first-release"
 
 ✖ skip version bump on first release
