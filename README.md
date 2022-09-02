@@ -59,3 +59,5 @@ npx --no-install commitlint --edit "$1"
 }
 ```
 6.) Set script `husky install` and prepare to install the husky Git hook: `npm pkg set scripts.scriptname="husky install"`
+
+7.) Test making a bad commit such as `git add . ; git commit -m "this is a bad commit". If it is working properly, npm should reject the commit with reasons.
