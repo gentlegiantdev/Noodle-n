@@ -106,8 +106,8 @@ npm i --save-dev standard-version
     {"type": "perf", "hidden": true},
     {"type": "test", "hidden": true}
   ],
-  "commitUrlFormat": "https://github.com/mokkapps/changelog-generator-demo/commits/{{hash}}",
-  "compareUrlFormat": "https://github.com/mokkapps/changelog-generator-demo/compare/{{previousTag}}...{{currentTag}}"
+  "commitUrlFormat": "https://github.com/gentlegiantdev/Noodle-n/commits/{{hash}}",
+  "compareUrlFormat": "https://github.com/gentlegiantdev/Noodle-n/compare/{{previousTag}}...{{currentTag}}"
 }
   
 ```
