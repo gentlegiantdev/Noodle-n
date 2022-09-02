@@ -43,8 +43,11 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 
 # Installing Husky
 1.) Follow the [Conventional Commits Guidelines](https://www.conventionalcommits.org/en/v1.0.0/).
+
 2.) Install `husky`: `npx husky-init && npm install`
+
 3.) Install `commitlint`: `npm install @commitlint/{cli,config-conventional}`
+
 4.) Tell Husky to run `commitlint`:
 ```bash
 #!/bin/sh
@@ -52,12 +55,14 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 
 npx --no-install commitlint --edit "$1"
 ```
+
 5.) Create `.commitlintrc.json`:
 ```bash
 {
   "extends": ["@commitlint/config-conventional"]
 }
 ```
+
 6.) Set script `husky install` and prepare to install the husky Git hook: `npm pkg set scripts.scriptname="husky install"`
 
 7.) Test making a bad commit such as `git add . ; git commit -m "this is a bad commit". If it is working properly, npm should reject the commit with reasons.
