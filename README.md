@@ -41,7 +41,7 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
  
  Have fun testing and improving it! 😎
 
-# Installing Husky
+# Configuring Commit Linter
 1.) Follow the [Conventional Commits Guidelines](https://www.conventionalcommits.org/en/v1.0.0/).
 
 2.) Install `husky`:
@@ -74,11 +74,11 @@ npx --no-install commitlint --edit "$1"
 npm pkg set scripts.scriptname="husky install"
 ```
 
-7.) Test making a bad commit such as `git add . ; git commit -m "this is a bad commit". If it is working properly, npm should reject the commit with reasons.
+7.) Test making an invalid commit such as `git add . ; git commit -m "this is a bad commit". If it is working properly, npm should reject the commit with reasons.
 
 # Configuring Semantic Versioning and Automatic Changelog Generator
 
-1.) Install `standard-version`
+1.) Install `standard-version`:
 ```md
 npm i --save-dev standard-version
 ```
@@ -129,17 +129,17 @@ a.) First release: run `npm run release -- --first-release`:
 ℹ Run `git push --follow-tags origin master` to publish
 ```
 
-b.) Bug Fix patches after using a `fix: ` commit:
+b.) Bug Fix patches after using a `fix:` commit:
 ```md
 ▶ npm run release:patch
 ```
 
-c.) Minor patches after using a `feat: ` commit:
+c.) Minor patches after using a `feat:` commit:
 ```md
 ▶ npm run release:minor
 ```
 
-d.) Major patches after using a `BREAKING CHANGE: ` commit:
+d.) Major patches after using a `BREAKING CHANGE:` commit:
 ```md
 ▶ npm run release:major
 ```
