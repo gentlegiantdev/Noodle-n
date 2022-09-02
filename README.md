@@ -5,7 +5,7 @@ Noodle'n is a Full-stack web application designed to aid your individual grocery
 ---
 
 # Mission and Objectives
-#### Who? What? Where? When? Why?
+### Who? What? Where? When? Why?
 
 - Our mission is to create a grocery shopping app that allows users to efficiently track grocery supplies before, during, and after shopping.
 
@@ -14,11 +14,11 @@ Noodle'n is a Full-stack web application designed to aid your individual grocery
 ---
 
 # Project Overview
-#### Time
+### Time
 
 - Estimated Duration: 1 Week
 
-#### Team
+### Team
 
 - Full-Stack Developer
 - Front-end Specialist
@@ -30,7 +30,7 @@ Noodle'n is a Full-stack web application designed to aid your individual grocery
 ---
 
 # Problem Statement
-#### What problem does this application solve?
+### What problem does this application solve?
 
 - Organizing shared resources for large families.
 - Prevent wasting money and food.
