@@ -8,5 +8,3 @@ All notable changes to this project will be documented in this file. See [standa
 ### Features
 
 * implemented pilot version of commitlinter and automatic changelog generation ([5397fb5](https://github.com/gentlegiantdev/Noodle-n/commits/5397fb524c5a7f6a738c32940cef0b9490493d40))
-
-## 1.0.0 (2022-09-01)
