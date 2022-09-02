@@ -2,7 +2,7 @@
 
 ### User 1: Tabitha
 #### Busy Mother and Stylist
-![Tabitha](img/Tabitha.png)
+<img src="img/Tabitha.png" alt="Tabitha" width="100" height="100"/>
 - Tabitha is a mother of 2 and full-
 time hair stylist. She forgets to go
 the store to buy food, and when
@@ -19,7 +19,7 @@ feeling like chore.
 
 ### User 2: Carl
 #### Tax Specialist
-![Carl](img/Carl.png)
+<img src="img/Carl.png" alt="Carl" width="100" height="100"/>
 - Carl works from home and
 recently started the Keto diet and
 also grocery shops for his mom
