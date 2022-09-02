@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.1](https://github.com/gentlegiantdev/Noodle-n/compare/v1.4.0...v1.4.1) (2022-09-02)
+
+
+### Features
+
+* added images of Carl and Tabitha and created and img directory ([bede2b5](https://github.com/gentlegiantdev/Noodle-n/commits/bede2b5a9b3ee0030c213f7123b5e1a2ab8d9be9))
+
+
+### Bug Fixes
+
+* fixed typos in market research and documentation ([7f1cb83](https://github.com/gentlegiantdev/Noodle-n/commits/7f1cb8333ec58b869718638ecb730343f8c76245))
+
 ## [1.4.0](https://github.com/gentlegiantdev/Noodle-n/compare/v1.3.0...v1.4.0) (2022-09-02)
 
 
