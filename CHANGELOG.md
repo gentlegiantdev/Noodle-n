@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/gentlegiantdev/Noodle-n/compare/v1.3.0...v1.4.0) (2022-09-02)
+
+
+### Features
+
+* added compartimentalization into CHANGELOG, README, RESEARCH, and SYSTEM_DESIGN ([27175bc](https://github.com/gentlegiantdev/Noodle-n/commits/27175bc32c88bbc4417a3d2b1530ebbbc98373fb))
+* added Goals/Solutions section in documentation ([cb37a14](https://github.com/gentlegiantdev/Noodle-n/commits/cb37a14770b448f59c158bd35cf672303c396c20))
+
 ## [1.3.0](https://github.com/gentlegiantdev/Noodle-n/compare/v1.2.0...v1.3.0) (2022-09-02)
 
 
