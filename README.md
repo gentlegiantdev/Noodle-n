@@ -109,7 +109,7 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 
 2.) Install `husky`:
 ```md
-npx husky-init && npm install
+npm install husky -D
 ```
 
 3.) Install `commitlint`:
