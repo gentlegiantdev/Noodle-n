@@ -43,6 +43,30 @@ module.exports = {
             console.log(err)
         }
     },
+    increaseQuantity: async (req, res)=>{
+        try{
+            await GroceryItem.updateOne({_id:req.body.groceryItemIdFromJSFile},{
+                // increments value
+                $inc: { quantity: +1}
+            })
+            console.log('Increased Quantity')
+            res.json('Increased Quantity')
+        }catch(err){
+            console.log(err)
+        }
+    }, 
+    decreaseQuantity: async (req, res)=>{
+        try{
+            await GroceryItem.updateOne({_id:req.body.groceryItemIdFromJSFile},{
+                // decrements value
+                $inc: { quantity: -1}
+            })
+            console.log('Decreased Quantity')
+            res.json('Decreased Quantity')
+        }catch(err){
+            console.log(err)
+        }
+    },    
     deleteGroceryItem: async (req, res)=>{
         console.log(req.body.groceryItemIdFromJSFile)
         try{
