@@ -1,6 +1,8 @@
 const deleteBtn = document.querySelectorAll('.del')
 const groceryItemItem = document.querySelectorAll('span.not')
 const groceryItemComplete = document.querySelectorAll('span.completed')
+const increaseQuantityBtn = document.querySelectorAll('.increaseQuantityBtn')
+const decreaseQuantityBtn = document.querySelectorAll('.decreaseQuantityBtn')
 
 Array.from(deleteBtn).forEach((el)=>{
     el.addEventListener('click', deleteGroceryItem)
@@ -13,6 +15,15 @@ Array.from(groceryItemItem).forEach((el)=>{
 Array.from(groceryItemComplete).forEach((el)=>{
     el.addEventListener('click', markIncomplete)
 })
+
+Array.from(increaseQuantityBtn).forEach((el)=>{
+    el.addEventListener('click', increaseQuantity)
+ })
+
+  Array.from(decreaseQuantityBtn).forEach((el)=>{
+    el.addEventListener('click', decreaseQuantity)
+ })
+ 
 
 async function deleteGroceryItem(){
     const groceryItemId = this.parentNode.dataset.id
@@ -67,3 +78,40 @@ async function markIncomplete(){
         console.log(err)
     }
 }
+
+async function increaseQuantity(){
+    const groceryItemId = this.parentNode.dataset.id
+    try{
+        const response = await fetch('groceryItems/increaseQuantity', {
+            method: 'put',
+            headers: {'Content-type': 'application/json'},
+            body: JSON.stringify({
+                'groceryItemIdFromJSFile': groceryItemId
+            })
+        })
+        const data = await response.json()
+        console.log(data)
+        location.reload()
+    }catch(err){
+        console.log(err)
+    }
+ }
+  
+ async function decreaseQuantity(){
+    const groceryItemId = this.parentNode.dataset.id
+    try{
+        const response = await fetch('groceryItems/decreaseQuantity', {
+            method: 'put',
+            headers: {'Content-type': 'application/json'},
+            body: JSON.stringify({
+                'groceryItemIdFromJSFile': groceryItemId
+            })
+        })
+        const data = await response.json()
+        console.log(data)
+        location.reload()
+    }catch(err){
+        console.log(err)
+    }
+ }
+ 
