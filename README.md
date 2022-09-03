@@ -117,7 +117,7 @@ npx husky-init && npm install
 npm install @commitlint/{cli,config-conventional}
 ```
 
-4.) Tell Husky to run `commitlint`:
+4.) In the `.husky` folder, paste this in to tell Husky to run `commitlint`:
 ```bash
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
