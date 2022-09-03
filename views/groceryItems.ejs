@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>GroceryItems</h1>
+    <p>Add Number</p>
+    <ul>
+    <% groceryItems.forEach( el => { %>
+            <li class='groceryItemItem' data-id='<%=el._id%>'>
+                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.groceryItem %></span>
+                <span class='del'> Delete </span>
+            </li>
+    <% }) %>    
+    </ul>
+
+    <h2><%= user.userName %> has <%= left %> things left to do.</h2>
+
+    <form action="/groceryItems/createGroceryItem" method='POST'>
+        <input type="text" placeholder="Enter GroceryItem Item" name='groceryItemItem'>
+        <input type="number" name="groceryItemNum"> 
+        <button type="submit">Submit</button> 
+    </form>
+
+    <a href="/logout">Logout</a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

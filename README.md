@@ -48,6 +48,9 @@ Noodle'n is a Full-stack web application designed to aid your individual grocery
 ### MVP
 - Create a basic app that has CRUD.
 
+---
+
+# Who is this for?
 ### Solutions
 - Parents: allow syncing of grocery items that are 1.) already in fridge and 2.) needs purchasing.
 - Restaurant: allow restaurant owners to prioritize purchases based on cost and expiration date.
@@ -81,7 +84,7 @@ Noodle'n is a Full-stack web application designed to aid your individual grocery
 
 ---
 
-# Packages/Dependencies used 
+# Packages/Dependencies used
 
 bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mongodb, mongoose, morgan, nodemon, passport, passport-local, validator, husky, commitlint, standard-version, commitizen
 
@@ -89,7 +92,7 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 
 # Install all the dependencies or node packages used for development via Terminal
 
-`npm install` 
+`npm install`
 
 ---
 

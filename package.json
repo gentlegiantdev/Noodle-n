@@ -1,6 +1,6 @@
 {
-  "name": "todo-mvc-auth-local",
-  "version": "1.5.0",
+  "name": "groceryitem-mvc-auth-local",
+  "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
