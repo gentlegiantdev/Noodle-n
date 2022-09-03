@@ -1,5 +1,6 @@
 const { Int32 } = require('mongodb')
 const mongoose = require('mongoose')
+const groceryItems = require('../controllers/groceryItems')
 
 const GroceryItemSchema = new mongoose.Schema({
   groceryItem: {
@@ -17,7 +18,8 @@ const GroceryItemSchema = new mongoose.Schema({
   userId: {
     type: String,
     required: true
-  }
+  }},
+  { collection : 'groceryItems'
 })
 
 module.exports = mongoose.model('GroceryItem', GroceryItemSchema)
