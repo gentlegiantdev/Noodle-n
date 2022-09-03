@@ -11,6 +11,10 @@ router.put('/markComplete', groceryItemsController.markComplete)
 
 router.put('/markIncomplete', groceryItemsController.markIncomplete)
 
+router.put('/increaseQuantity', groceryItemsController.increaseQuantity)
+
+router.put('/decreaseQuantity', groceryItemsController.decreaseQuantity)
+
 router.delete('/deleteGroceryItem', groceryItemsController.deleteGroceryItem)
 
 module.exports = router

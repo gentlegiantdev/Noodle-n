@@ -12,10 +12,13 @@
     <p>Add Number</p>
     <ul>
     <% groceryItems.forEach( el => { %>
-            <li class='groceryItemItem' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.groceryItem %></span>
-                <span class='del'> Delete </span>
-            </li>
+        <li class='groceryItemItem' data-id='<%=el._id%>'>
+            <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.groceryItem %></span>
+            <span><%= el.quantity %></span>
+            <span class='del'> Delete </span>
+            <button class="increaseQuantityBtn">+</button>
+            <button class="decreaseQuantityBtn">-</button>
+        </li>
     <% }) %>    
     </ul>
 
