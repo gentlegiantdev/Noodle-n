@@ -117,7 +117,7 @@ npm install husky -D
 npm install @commitlint/{cli,config-conventional}
 ```
 
-4.) In the `.husky` folder, paste this in to tell Husky to run `commitlint`:
+4.) In the `.husky` folder, paste this in to a file "commit-msg" tell Husky to run `commitlint`:
 ```bash
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
@@ -132,12 +132,18 @@ npx --no-install commitlint --edit "$1"
 }
 ```
 
-6.) Set script `husky install` and prepare to install the husky Git hook: 
+6.) Give `commit-msg` execute permissions:
 ```md
-npm pkg set scripts.scriptname="husky install"
+chmod ug+x .husky/*
 ```
 
-7.) Test making an invalid commit such as `git add . ; git commit -m "this is a bad commit"`. If it is working properly, npm should reject the commit with reasons.
+7.) Set script `husky install` and prepare to install the husky Git hook: 
+```md
+npm pkg set scripts.prepare="husky install"
+npm run prepare
+```
+
+8.) Test making an invalid commit such as `git add . ; git commit -m "this is a bad commit"`. If it is working properly, npm should reject the commit with reasons.
 
 ---
 
