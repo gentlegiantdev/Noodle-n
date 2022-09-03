@@ -105,7 +105,10 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
  ---
 
 # Configuring Commit Linter to Enforce High Quality Commit Messages
-1.) Follow the [Conventional Commits Guidelines](https://www.conventionalcommits.org/en/v1.0.0/).
+1.) Install `npx`:
+```md
+npm install -g npx
+```
 
 2.) Install `husky`:
 ```md
