@@ -83,7 +83,7 @@ Noodle'n is a Full-stack web application designed to aid your individual grocery
 
 # Packages/Dependencies used 
 
-bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mongodb, mongoose, morgan, nodemon, passport, passport-local, validator, husky, commitlint, standard-version
+bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mongodb, mongoose, morgan, nodemon, passport, passport-local, validator, husky, commitlint, standard-version, commitizen
 
 ---
 
@@ -134,7 +134,7 @@ npx --no-install commitlint --edit "$1"
 npm pkg set scripts.scriptname="husky install"
 ```
 
-7.) Test making an invalid commit such as `git add . ; git commit -m "this is a bad commit". If it is working properly, npm should reject the commit with reasons.
+7.) Test making an invalid commit such as `git add . ; git commit -m "this is a bad commit"`. If it is working properly, npm should reject the commit with reasons.
 
 ---
 
