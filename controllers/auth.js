@@ -105,23 +105,24 @@ const bcrypt = require('bcrypt')
 
   //postResetPassword to process the submitted reset form  
   exports.postResetPassword = (req, res, next) => {
+
     
-    //validating reset form inputs
-    const validationErrors = []
+     //validating reset form inputs
+     const validationErrors = []
     
-    if (!validator.isEmail(req.body.email)) validationErrors.push({ msg: 'Please enter a valid email address.' })
-    if (validator.isEmpty(req.body.password)) validationErrors.push({ msg: 'Old password cannot be blank.' })
-    if (validator.isEmpty(req.body.newPassword)) validationErrors.push({ msg: 'New password cannot be blank.' })
-    if (validator.isEmpty(req.body.confirmNewPassword)) validationErrors.push({ msg: 'Confirm new password cannot be blank.' })
-
-    if(req.body.newPassword !== req.body.confirmNewPassword){validationErrors.push({ msg: 'New passwords are not same.' })}
-
-    //if one or more reset form inputs is invalid 
-    if (validationErrors.length) {
-      req.flash('errors', validationErrors)
-      return res.redirect('/reset')
-    }
-
+     if (!validator.isEmail(req.body.email)) validationErrors.push({ msg: 'Please enter a valid email address.' })
+     if (validator.isEmpty(req.body.password)) validationErrors.push({ msg: 'Old password cannot be blank.' })
+     if (validator.isEmpty(req.body.newPassword)) validationErrors.push({ msg: 'New password cannot be blank.' })
+     if (validator.isEmpty(req.body.confirmNewPassword)) validationErrors.push({ msg: 'Confirm new password cannot be blank.' })
+ 
+     if(req.body.newPassword !== req.body.confirmNewPassword){validationErrors.push({ msg: 'New passwords are not same.' })}
+ 
+     //if one or more reset form inputs is invalid 
+     if (validationErrors.length) {
+       req.flash('errors', validationErrors)
+       return res.redirect('/reset')
+     }
+ 
      
     // if all reset form inputs are valid:
     
