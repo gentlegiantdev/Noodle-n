@@ -1,38 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grocery List</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <h1>GroceryItems</h1>
-    <p>Add Number</p>
-    <ul>
-    <% groceryItems.forEach( el => { %>
-        <li class='groceryItemItem' data-id='<%=el._id%>'>
-            <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.groceryItem %></span>
-            <span><%= el.quantity %></span>
-            <span class='del'> Delete </span>
-            <button class="increaseQuantityBtn">+</button>
-            <button class="decreaseQuantityBtn">-</button>
-        </li>
-    <% }) %>    
-    </ul>
+<%-include("./partials/header.ejs")%>
+<%-include("./partials/navbar.ejs")%>
+<main class="main">
+    <!-- Page Title Start -->
+    <div class="main-h1-div">
+        <h1 class="main-h1"><%= user.userName %>'s' List</h1>
+        <h2 class="main-h3"><%= user.userName %> has <%= left %> items left to buy.</h2>
+    </div>
+    <!-- Page Title End -->
+    <!-- Grocery Item Container Start -->
+    <div class="grocery-item-container">
+                <% groceryItems.forEach( el => { %>
+                    <div class="grocery-item groceryItemItem" data-id='<%=el._id%>'>
+                        <div class="grocery-item-delete">
+                            <span class='del'> <p>Delete </p></span>
+                        </div>
+                        <div class="grocery-item-name">
+                            <span class='<%= el.completed === true ? 'completed' : 'not'%>'><h3><%= el.groceryItem %></h3></span>
+                        </div>
+                        <div class="grocery-item-btn-div">
+                            <button class="quanity-btn increaseQuantityBtn"><img class="quanity-btn-img" src="/img/up.png"></button>
+                            <p>Quanitiy: <%= el.quantity %></p>
+                            <button class="quanity-btn decreaseQuantityBtn"><img class="quanity-btn-img" src="/img/down.png"></button>
+                        </div>
+                       
+                    </div>
+                <% }) %>    
+        </div>
+    </div>
+    <!-- Grocery Item Container End -->
+    <!-- Add New Item Start -->
+    <div class="add-item-div">
+        <h3> Add New Item</h3>
+        <form class="add-item-form" action="/groceryItems/createGroceryItem" method='POST'>
+            <input type="text" placeholder="Enter Item Name" name='groceryItemItem'>
+            <input type="number" placeholder="Enter Quanity" min="1" name="groceryItemNum"> 
+            <button type="submit" class="submit-btn"><p>Submit</p></button> 
+        </form>
+    </div>
+    <!-- Add New Item End -->
 
-    <h2><%= user.userName %> has <%= left %> items left to buy.</h2>
 
-    <form action="/groceryItems/createGroceryItem" method='POST'>
-        <input type="text" placeholder="Enter GroceryItem Item" name='groceryItemItem'>
-        <input type="number" name="groceryItemNum" min="1"> 
-        <button type="submit">Submit</button> 
-    </form>
+</main>
+   
+<%-include("./partials/footer.ejs")%>
 
-    <a href="/reset">Reset Password</a>
-    <a href="/logout">Logout</a>
-
-    <script src="js/main.js"></script>
-</body>
-</html>
+   

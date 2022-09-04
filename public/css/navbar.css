@@ -1,0 +1,38 @@
+
+.header{
+    background-color: var(--black);
+}
+
+.nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:2.5em;
+    cursor: pointer;
+}
+
+/*  */
+
+.nav-brand-h1{
+    color: var(--white);
+}
+
+/* Hamburger Icon */
+
+.nav-ham{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+ 
+}
+
+.ham-item{
+    width: 50px;
+    height: 5.5px;
+    background-color:var(--white);
+    margin:0.35em 0;
+    border-radius: 5px;
+}
