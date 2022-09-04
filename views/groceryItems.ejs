@@ -8,14 +8,23 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>GroceryItems</h1>
-    <p>Add Number</p>
+    <header>
+        <nav>
+            <h1>Noodle'N</h1>
+            <a href="#">About</a>
+            <a href="#">Blog</a>
+            <a href="#">My Account</a>
+            <button class="viewList">View List</button>
+        </nav>
+    </header>
+    
+    <h2><%= user.userName %>'s Grocery List</h2>
     <ul>
     <% groceryItems.forEach( el => { %>
         <li class='groceryItemItem' data-id='<%=el._id%>'>
-            <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.groceryItem %></span>
-            <span><%= el.quantity %></span>
-            <span class='del'> Delete </span>
+            <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.groceryItem %></span> |
+            <span>Quantity: <%= el.quantity %></span> |
+            <span class='del'> Delete </span> |
             <button class="increaseQuantityBtn">+</button>
             <button class="decreaseQuantityBtn">-</button>
         </li>
@@ -26,7 +35,7 @@
 
     <form action="/groceryItems/createGroceryItem" method='POST'>
         <input type="text" placeholder="Enter GroceryItem Item" name='groceryItemItem'>
-        <input type="number" name="groceryItemNum"> 
+        <input type="number" name="groceryItemNum" min="1">
         <button type="submit">Submit</button> 
     </form>
 

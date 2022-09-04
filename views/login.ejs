@@ -17,10 +17,18 @@
             <div class="alert alert-danger"><%= el.msg %></div>
         <% }) %>    
     <% } %>
+    <header>
+        <nav>
+            <h1>Noodle'N</h1>
+            <span>Login</span>
+            <a href="#">Sign Up</a>
+        </nav>
+    </header>
     <form action="/login" method="POST">
         <input type="email" name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Password">
-        <input type="submit">
+        <a href="#">Forgot Password?</a> 
+        <input type="submit">Login</input>
     </form>
 </body>
 </html>
