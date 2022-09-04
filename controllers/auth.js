@@ -1,6 +1,7 @@
 const passport = require('passport')
 const validator = require('validator')
 const User = require('../models/User')
+const bcrypt = require('bcrypt')
 
  exports.getLogin = (req, res) => {
     if (req.user) {
@@ -95,8 +96,48 @@ const User = require('../models/User')
     })
   }
 
+  //resetPassword method renders reset.ejs as a response
   exports.resetPassword = (req, res) => {
     res.render('reset', {
       title: 'Reset'
     })
+  }
+
+  //postResetPassword to process the submitted reset form  
+  exports.postResetPassword = (req, res, next) => {
+    
+    //Validate user exists: Go to database and find user using email as filter
+    User.findOne({email: req.body.email}).then((user) => {
+      //user not found:
+      if(!user){
+        req.flash('errors',{ msg: 'No such user account exists' })
+        console.log("User not found")
+        return res.redirect('/reset')
+      }
+      //user found:
+      if(user){
+        bcrypt.compare(req.body.password, user.password, (err, isMatch) => { //compare is bcrypt's method
+          if(err){
+            console.log(err)
+          }
+          //if user's entered old password matches the password stored in the database 
+          if(isMatch){
+            console.log(req.body)
+            user.password = req.body.newPassword
+            user.save()
+            
+             
+            res.redirect('/login')
+          }
+
+          //if old password does not match the password stored in the database 
+          else{
+            req.flash('errors',{ msg: 'Old password is incorrect' })
+            return res.redirect('/reset')
+          }
+  
+        })
+      }
+    })
+  
   }
