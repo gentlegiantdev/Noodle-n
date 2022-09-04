@@ -57,7 +57,7 @@ module.exports = {
     }, 
     decreaseQuantity: async (req, res)=>{
         try{
-            await GroceryItem.updateOne({_id:req.body.groceryItemIdFromJSFile, quantity:{$gte: 1}},{
+            await GroceryItem.updateOne({_id:req.body.groceryItemIdFromJSFile, quantity:{$gt: 1}},{
                 // decrements values >= 1
                 $inc: { quantity: -1}
             })

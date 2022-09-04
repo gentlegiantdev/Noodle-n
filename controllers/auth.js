@@ -1,6 +1,7 @@
 const passport = require('passport')
 const validator = require('validator')
 const User = require('../models/User')
+const bcrypt = require('bcrypt')
 
  exports.getLogin = (req, res) => {
     if (req.user) {
@@ -93,4 +94,72 @@ const User = require('../models/User')
         })
       })
     })
+  }
+
+  //resetPassword method renders reset.ejs as a response
+  exports.resetPassword = (req, res) => {
+    res.render('reset', {
+      title: 'Reset'
+    })
+  }
+
+  //postResetPassword to process the submitted reset form  
+  exports.postResetPassword = (req, res, next) => {
+
+    
+     //validating reset form inputs
+     const validationErrors = []
+    
+     if (!validator.isEmail(req.body.email)) validationErrors.push({ msg: 'Please enter a valid email address.' })
+     if (validator.isEmpty(req.body.password)) validationErrors.push({ msg: 'Old password cannot be blank.' })
+     if (validator.isEmpty(req.body.newPassword)) validationErrors.push({ msg: 'New password cannot be blank.' })
+     if (validator.isEmpty(req.body.confirmNewPassword)) validationErrors.push({ msg: 'Confirm new password cannot be blank.' })
+ 
+     if(req.body.newPassword !== req.body.confirmNewPassword){validationErrors.push({ msg: 'New passwords are not same.' })}
+ 
+     //if one or more reset form inputs is invalid 
+     if (validationErrors.length) {
+       req.flash('errors', validationErrors)
+       return res.redirect('/reset')
+     }
+ 
+     
+    // if all reset form inputs are valid:
+    
+    req.body.email = validator.normalizeEmail(req.body.email, { gmail_remove_dots: false })
+
+    //Validate user exists: Go to database and find user using email as filter
+    User.findOne({email: req.body.email}).then((user) => {
+      //user not found:
+      if(!user){
+        req.flash('errors',{ msg: 'No such user account exists' })
+        console.log("User not found")
+        return res.redirect('/reset')
+      }
+      //user found:
+      if(user){
+        bcrypt.compare(req.body.password, user.password, (err, isMatch) => { //compare is bcrypt's method
+          if(err){
+            console.log(err)
+          }
+          //if user's entered old password matches the password stored in the database 
+          if(isMatch){
+            console.log(req.body)
+            user.password = req.body.newPassword
+            user.save()
+            
+             
+            res.redirect('/login')
+          }
+
+          //if old password does not match the password stored in the database 
+          else{
+            req.flash('errors',{ msg: 'Old password is incorrect' })
+            return res.redirect('/reset')
+          }
+  
+        })
+      }
+    })
+  
   }

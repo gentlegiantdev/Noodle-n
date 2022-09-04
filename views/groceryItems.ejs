@@ -33,7 +33,7 @@
         <h3> Add New Item</h3>
         <form class="add-item-form" action="/groceryItems/createGroceryItem" method='POST'>
             <input type="text" placeholder="Enter Item Name" name='groceryItemItem'>
-            <input type="number" placeholder="Enter Quanity"  name="groceryItemNum"> 
+            <input type="number" placeholder="Enter Quanity" min="1" name="groceryItemNum"> 
             <button type="submit" class="submit-btn"><p>Submit</p></button> 
         </form>
     </div>
@@ -42,12 +42,6 @@
 
 </main>
    
-
-   
-
-
-
-  
-    <%-include("./partials/footer.ejs")%>
+<%-include("./partials/footer.ejs")%>
 
    
