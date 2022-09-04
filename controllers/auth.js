@@ -94,3 +94,9 @@ const User = require('../models/User')
       })
     })
   }
+
+  exports.resetPassword = (req, res) => {
+    res.render('reset', {
+      title: 'Reset'
+    })
+  }
