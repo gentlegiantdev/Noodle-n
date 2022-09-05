@@ -12,4 +12,5 @@ router.get('/signup', authController.getSignup)
 router.post('/signup', authController.postSignup)
 router.get('/reset', authController.resetPassword)
 router.post('/reset', authController.postResetPassword)
+router.get('/about', homeController.getIndex)
 module.exports = router
