@@ -2,16 +2,23 @@
 if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
 <div class="alert alert-danger"><%= el.msg %></div>
 <% }) %> <% } %>
-<form action="/signup" method="POST">
-  <input type="text" name="userName" placeholder="User Name" />
-  <input type="email" name="email" placeholder="Email" />
-  <input type="password" name="password" placeholder="Password" />
-  <input
-    type="password"
-    name="confirmPassword"
-    placeholder="Confirm Password"
-  />
-  <input type="submit" />
-</form>
-
+<div class="user-info">
+  <h1>Register to Begin!</h1>
+  <section class="user-input">
+    <form action="/signup" method="POST">
+      <input type="text" name="userName" placeholder="User Name" />
+      <input type="email" name="email" placeholder="Email" />
+      <input type="password" name="password" placeholder="Password" />
+      <input
+        type="password"
+        name="confirmPassword"
+        placeholder="Confirm Password"
+      />
+      <input type="submit" />
+    </form>
+  </section>
+  <section class="panda-img">
+    <img class="panda-cute" src="/img/panda-cute.png">
+  </section>
+</div>
 <%-include("./partials/footer.ejs")%>
