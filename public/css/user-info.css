@@ -8,25 +8,27 @@
 }
 
 .user-input {
-  height: 75%;
-  width: 75%;
+  flex: 2;
   align-items: center;
   justify-content: center;
 }
 
 .panda-img {
   display: flex;
+  flex: 1;
   flex-direction: column;
-  max-width: 25%;
-  max-height: 25%;
 }
 
 section img {
-  margin-top: 5em;
   position: relative;
   align-self: flex-end;
   align-items: flex-end;
   flex-flow: row wrap;
+}
+
+.alert {
+  flex: 1;
+  font-size: 3em;
 }
 
 @media only screen and (max-width: 428px) {

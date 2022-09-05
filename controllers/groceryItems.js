@@ -84,7 +84,6 @@ module.exports = {
         {
           // decrements values >= 1
           $inc: { quantity: -1 },
-          message: "Decreased Quantity",
         }
       );
       console.log("Decreased Quantity");
