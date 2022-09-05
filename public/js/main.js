@@ -96,6 +96,7 @@ async function increaseQuantity() {
   } catch (err) {
     console.log(err);
   }
+}
 
 async function decreaseQuantity() {
   const groceryItemId = this.parentNode.dataset.id;
