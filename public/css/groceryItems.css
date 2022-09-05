@@ -37,6 +37,10 @@
    margin:1em 3em 3em 0;;
 }
 
+.del{
+    cursor: pointer;
+}
+
 .grocery-item-name{
     padding-top: 3em;
 }

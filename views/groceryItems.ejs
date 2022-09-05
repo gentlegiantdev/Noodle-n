@@ -9,20 +9,22 @@
     <!-- Page Title End -->
     <!-- Grocery Item Container Start -->
     <div class="grocery-item-container">
-                <% groceryItems.forEach( el => { %>
+                <% groceryItems.forEach( (el) => { %>
                     <div class="grocery-item groceryItemItem" data-id='<%=el._id%>'>
-                        <div class="grocery-item-delete">
-                            <span class='del'> <p>Delete </p></span>
+                        
+                        <div class="del grocery-item-delete">
+                           <p >Delete</p>
                         </div>
                         <div class="grocery-item-name">
-                            <span class='<%= el.completed === true ? 'completed' : 'not'%>'><h3><%= el.groceryItem %></h3></span>
+                            <span class='<%= el.completed === true ? 'completed' : 'not'%>'>
+                                <h3><%= el.groceryItem %></h3></span>
                         </div>
-                        <div class="grocery-item-btn-div">
-                            <button class="quanity-btn increaseQuantityBtn"><img class="quanity-btn-img" src="/img/up.png"></button>
-                            <p>Quanitiy: <%= el.quantity %></p>
-                            <button class="quanity-btn decreaseQuantityBtn"><img class="quanity-btn-img" src="/img/down.png"></button>
-                        </div>
+                     
+                            <button class="increaseQuantityBtn"><img class="quanity-btn-img" src="/img/up.png"></button>
+                        <p>Quanitiy: <%= el.quantity %></p>
+                        <button class="decreaseQuantityBtn"><img class="quanity-btn-img" src="/img/up.png"></button>
                        
+
                     </div>
                 <% }) %>    
         </div>
