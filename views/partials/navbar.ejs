@@ -1,12 +1,22 @@
-<header class="header">
-  <nav class="nav">
-    <div class="nav-brand">
-      <h1 class="nav-brand-h1">Noodle’N</h1>
-    </div>
-    <div class="nav-ham">
-      <div class="ham-item"></div>
-      <div class="ham-item"></div>
-      <div class="ham-item"></div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<h1>Welcome to The Noodle’N Grocery App</h1>
+    <div class="topnav">
+      <a href="/" class="nav-brand-h1">Noodle’N</a>
+      <!-- Navigation links (hidden by default) -->
+      <div id="myLinks">
+        <ul>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/logout">Logout</a></li>
+          <li><a href="/signup">Signup</a></li>
+          <li><a href="/reset">Forgot Password</a></li>
+          
+        </ul>
+        
+      </div>
+      <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
   </nav>
 </header>
