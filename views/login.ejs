@@ -1,15 +1,20 @@
 <%-include("./partials/header.ejs")%> <%-include("./partials/navbar.ejs")%>
-<div>
+<div class="login-form">
   <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
   <div class="alert alert-danger"><%= el.msg %></div>
   <% }) %> <% } %> <% if (locals.messages.info) { %> <% messages.info.forEach(
   el => { %>
   <div class="alert alert-danger"><%= el.msg %></div>
   <% }) %> <% } %>
-  <form action="/login" method="POST">
-    <input type="email" name="email" placeholder="Email" />
-    <input type="password" name="password" placeholder="Password" />
-    <input type="submit" />
-  </form>
+  <section>
+    <h1 class="main-h1">Welcome Back!</h1>
+    <form action="/login" method="POST">
+      <input type="email" name="email" placeholder="Email" />
+      <input type="password" name="password" placeholder="Password" />
+      <input type="submit" />
+    </form>
+  </section>
+  <img class="panda-cute" src="/img/panda-cute.png">
 </div>
+
 <%-include("./partials/footer.ejs")%>
