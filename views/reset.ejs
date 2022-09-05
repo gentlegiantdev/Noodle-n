@@ -1,12 +1,13 @@
-<%-include("./partials/header.ejs")%>
-<%-include("./partials/navbar.ejs")%>
+<%-include("./partials/header.ejs")%> <%-include("./partials/navbar.ejs")%>
+<div class="user-info">
+  <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
+  <div class="alert alert-danger"><%= el.msg %></div>
+  <% }) %> <% } %> <% if (locals.messages.info) { %> <% messages.info.forEach(
+  el => { %>
+  <div class="alert alert-danger"><%= el.msg %></div>
+  <% }) %> <% } %>
+  <section class="user-input">
     <h1>Reset Password</h1>
-    <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
-    <div class="alert alert-danger"><%= el.msg %></div>
-    <% }) %> <% } %> <% if (locals.messages.info) { %> <% messages.info.forEach(
-    el => { %>
-    <div class="alert alert-danger"><%= el.msg %></div>
-    <% }) %> <% } %>
     <form action="/reset" method="POST">
       <input type="email" name="email" placeholder="Email" />
       <input type="password" name="password" placeholder="Old Password" />
@@ -18,4 +19,9 @@
       />
       <input type="submit" />
     </form>
-    <%-include("./partials/footer.ejs")%>
+  </section>
+  <section>
+    <img class="panda-cute" src="/img/panda-cute.png">
+  </section>
+</div>
+<%-include("./partials/footer.ejs")%>

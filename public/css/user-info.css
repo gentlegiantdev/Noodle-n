@@ -1,4 +1,4 @@
-.login-form {
+.user-info {
   display: flex;
   position: relative;
   align-items: center;
@@ -7,22 +7,31 @@
   flex-flow: column wrap;
 }
 
-section {
-  height: 100%;
-  width: 100%;
+.user-input {
+  height: 75%;
+  width: 75%;
   align-items: center;
   justify-content: center;
 }
 
-img {
+.panda-img {
   display: flex;
+  flex-direction: column;
+  max-width: 25%;
+  max-height: 25%;
 }
 
-div img {
+section img {
   margin-top: 5em;
   position: relative;
   align-self: flex-end;
   align-items: flex-end;
   flex-flow: row wrap;
-  bottom: 0;
+}
+
+@media only screen and (max-width: 428px) {
+  div img {
+    justify-content: center;
+    align-items: center;
+  }
 }

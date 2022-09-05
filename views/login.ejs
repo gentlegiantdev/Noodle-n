@@ -1,12 +1,12 @@
 <%-include("./partials/header.ejs")%> <%-include("./partials/navbar.ejs")%>
-<div class="login-form">
+<div class="user-info">
   <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
   <div class="alert alert-danger"><%= el.msg %></div>
   <% }) %> <% } %> <% if (locals.messages.info) { %> <% messages.info.forEach(
   el => { %>
   <div class="alert alert-danger"><%= el.msg %></div>
   <% }) %> <% } %>
-  <section>
+  <section class="user-input">
     <h1 class="main-h1">Welcome Back!</h1>
     <form action="/login" method="POST">
       <input type="email" name="email" placeholder="Email" />
@@ -14,7 +14,9 @@
       <input type="submit" />
     </form>
   </section>
-  <img class="panda-cute" src="/img/panda-cute.png">
+  <section class="panda-img">
+    <img class="panda-cute" src="/img/panda-cute.png">
+  </section>
 </div>
 
 <%-include("./partials/footer.ejs")%>
