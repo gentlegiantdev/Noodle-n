@@ -1,0 +1,37 @@
+.user-info {
+  display: flex;
+  position: relative;
+  align-items: center;
+  /* justify-content: center; */
+  text-align: center;
+  flex-flow: column wrap;
+}
+
+.user-input {
+  height: 75%;
+  width: 75%;
+  align-items: center;
+  justify-content: center;
+}
+
+.panda-img {
+  display: flex;
+  flex-direction: column;
+  max-width: 25%;
+  max-height: 25%;
+}
+
+section img {
+  margin-top: 5em;
+  position: relative;
+  align-self: flex-end;
+  align-items: flex-end;
+  flex-flow: row wrap;
+}
+
+@media only screen and (max-width: 428px) {
+  div img {
+    justify-content: center;
+    align-items: center;
+  }
+}

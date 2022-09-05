@@ -1,6 +1,7 @@
 const GroceryItem = require("../models/GroceryItem");
 
 module.exports = {
+  // 
   getGroceryItems: async (req, res) => {
     console.log(req.user);
     try {
