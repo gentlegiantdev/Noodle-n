@@ -1,18 +1,15 @@
-.footer{
-    background-color: var(--black);
-    width: 100%;
-    position: fixed;
-   bottom: 0;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   padding:2em 0;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
+.footer {
+  background-color: var(--black);
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  padding: 2em 0;
+  flex-direction: column;
 }
 
-.footer>*{
-    color:var(--white)
+.footer > * {
+  color: var(--white);
 }
