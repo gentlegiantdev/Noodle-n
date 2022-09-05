@@ -1,7 +1,7 @@
 const GroceryItem = require("../models/GroceryItem");
 
 module.exports = {
-  // 
+  // Keeps Track of What is in the Shopping Cart
   getGroceryItems: async (req, res) => {
     console.log(req.user);
     try {
@@ -19,6 +19,7 @@ module.exports = {
       console.log(err);
     }
   },
+  // Adding items to cart
   createGroceryItem: async (req, res) => {
     try {
       const item = await GroceryItem.create({
@@ -26,6 +27,7 @@ module.exports = {
         quantity: req.body.groceryItemNum,
         completed: false,
         userId: req.user.id,
+        unique: true,
       });
       console.log("GroceryItem has been added!");
       res.redirect("/groceryItems");
@@ -34,6 +36,7 @@ module.exports = {
       console.log(err);
     }
   },
+  // Deleting Items from Cart
   markComplete: async (req, res) => {
     try {
       await GroceryItem.findOneAndUpdate(
