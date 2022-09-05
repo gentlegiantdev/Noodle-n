@@ -10,8 +10,7 @@ const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const groceryItemRoutes = require("./routes/groceryItems");
 
-// require("dotenv").config({ path: "./config/.env" });
-require("dotenv").config();
+require("dotenv").config({ path: "./config/.env" });
 
 // Passport config
 require("./config/passport")(passport);

@@ -21,7 +21,7 @@
                         </div>
                      
                             <button class="increaseQuantityBtn"><img class="quanity-btn-img" src="/img/up.png"></button>
-                        <p>Quanitiy: <%= el.quantity %></p>
+                        <p>Quantity: <%= el.quantity %></p>
                         <button class="decreaseQuantityBtn"><img class="quanity-btn-img" src="/img/up.png"></button>
                        
 
@@ -35,7 +35,7 @@
         <h3> Add New Item</h3>
         <form class="add-item-form" action="/groceryItems/createGroceryItem" method='POST'>
             <input type="text" placeholder="Enter Item Name" name='groceryItemItem'>
-            <input type="number" placeholder="Enter Quanity" min="1" name="groceryItemNum"> 
+            <input type="number" placeholder="Enter Quantity" min="1" name="groceryItemNum"> 
             <button type="submit" class="submit-btn"><p>Submit</p></button> 
         </form>
     </div>
