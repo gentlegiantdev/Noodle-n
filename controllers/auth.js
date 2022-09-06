@@ -14,8 +14,8 @@ const bcrypt = require('bcrypt')
   
   exports.postLogin = (req, res, next) => {
     const validationErrors = []
-    if (!validator.isEmail(req.body.email)) validationErrors.push({ msg: 'Please enter a valid email address.' })
-    if (validator.isEmpty(req.body.password)) validationErrors.push({ msg: 'Password cannot be blank.' })
+    if (!validator.isEmail(req.body.email)) validationErrors.push({ msg: 'ERROR: Please enter a valid email address.' })
+    if (validator.isEmpty(req.body.password)) validationErrors.push({ msg: 'ERROR: Password cannot be blank.' })
   
     if (validationErrors.length) {
       req.flash('errors', validationErrors)
