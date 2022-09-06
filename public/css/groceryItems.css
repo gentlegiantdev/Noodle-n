@@ -70,7 +70,7 @@
   background-color: var(--white);
   border: 2px solid var(--black);
   position: fixed;
-  bottom: 50px;
+  bottom: 0;
   width: 100%;
   padding: 10em 0;
   z-index: 1;

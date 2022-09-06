@@ -8,6 +8,7 @@
     margin-top: 1em;
     text-transform: uppercase;
     font-weight: small;
+    margin: 1rem;
   }
   
   .btn-primary {
@@ -38,6 +39,8 @@
     justify-content: center;
     height: 100%;
     font-size: 1.6rem;
+    padding: 30px;
+    text-align: center;
   }
   
   .main-title {
@@ -76,6 +79,11 @@
     padding: 30px;
     transform: translateX(150%);
     animation: about-img-animation 1s ease-in-out forwards;
+  }
+
+  .landing-page-btn-container{
+    display: flex;
+    flex-direction: row;
   }
   
   @keyframes about-img-animation {
