@@ -110,12 +110,12 @@ const bcrypt = require('bcrypt')
      //validating reset form inputs
      const validationErrors = []
     
-     if (!validator.isEmail(req.body.email)) validationErrors.push({ msg: 'Please enter a valid email address.' })
-     if (validator.isEmpty(req.body.password)) validationErrors.push({ msg: 'Old password cannot be blank.' })
-     if (validator.isEmpty(req.body.newPassword)) validationErrors.push({ msg: 'New password cannot be blank.' })
-     if (validator.isEmpty(req.body.confirmNewPassword)) validationErrors.push({ msg: 'Confirm new password cannot be blank.' })
+     if (!validator.isEmail(req.body.email)) validationErrors.push({ msg: 'ERROR: Please enter a valid email address.' })
+     if (validator.isEmpty(req.body.password)) validationErrors.push({ msg: 'ERROR: Old password cannot be blank.' })
+     if (validator.isEmpty(req.body.newPassword)) validationErrors.push({ msg: 'ERROR: New password cannot be blank.' })
+     if (validator.isEmpty(req.body.confirmNewPassword)) validationErrors.push({ msg: 'ERROR: Confirm new password cannot be blank.' })
  
-     if(req.body.newPassword !== req.body.confirmNewPassword){validationErrors.push({ msg: 'New passwords are not same.' })}
+     if(req.body.newPassword !== req.body.confirmNewPassword){validationErrors.push({ msg: 'ERROR: New passwords are not same.' })}
  
      //if one or more reset form inputs is invalid 
      if (validationErrors.length) {
@@ -132,8 +132,8 @@ const bcrypt = require('bcrypt')
     User.findOne({email: req.body.email}).then((user) => {
       //user not found:
       if(!user){
-        req.flash('errors',{ msg: 'No such user account exists' })
-        console.log("User not found")
+        req.flash('errors',{ msg: 'ERROR: No such user account exists.' })
+        console.log("ERROR: User not found")
         return res.redirect('/reset')
       }
       //user found:
@@ -154,7 +154,7 @@ const bcrypt = require('bcrypt')
 
           //if old password does not match the password stored in the database 
           else{
-            req.flash('errors',{ msg: 'Old password is incorrect' })
+            req.flash('errors',{ msg: 'ERROR: Old password is incorrect' })
             return res.redirect('/reset')
           }
   
