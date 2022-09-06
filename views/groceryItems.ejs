@@ -16,9 +16,9 @@
                            <p >Delete</p>
                         </div>
                         <div class="grocery-item-name">
-                            <span class='<%= el.completed === true ? 'completed' : 'not'%>'>
+                            <input type="checkbox" class='checkbox <%= el.completed === true ? 'completed' : 'not'%>'>
                                 <h3><%= el.groceryItem %></h3></span>
-                        </div>
+                        </div>s
                      
                             <button class="increaseQuantityBtn"><img class="quanity-btn-img" src="/img/up.png"></button>
                         <p>Quantity: <%= el.quantity %></p>

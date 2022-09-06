@@ -3,8 +3,8 @@ const groceryItemItem = document.querySelectorAll('span.not');
 const groceryItemComplete = document.querySelectorAll('span.completed');
 const increaseQuantityBtn = document.querySelectorAll('.increaseQuantityBtn');
 const decreaseQuantityBtn = document.querySelectorAll('.decreaseQuantityBtn');
-console.log(increaseQuantityBtn);
-console.log(decreaseQuantityBtn);
+console.log(groceryItemItem);
+console.log(groceryItemComplete);
 
 Array.from(deleteBtn).forEach((el) => {
   el.addEventListener('click', deleteGroceryItem);
