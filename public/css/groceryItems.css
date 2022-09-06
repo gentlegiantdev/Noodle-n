@@ -28,6 +28,18 @@
   position: relative;
 }
 
+.checkbox {
+  position: absolute;
+  margin: 0 10em 3em 0em;
+  top: 2em;
+  right: 3em;
+  padding: 0 2em;
+}
+
+.grocery-item and .checkbox:checked {
+  background-color: gray;
+}
+
 .grocery-item-delete {
   /* align-self: flex-end; */
   position: absolute;
@@ -68,8 +80,6 @@
   transition: background 0.3s ease-in-out;
   border-radius: 50%;
 }
-
-  /**/
 
 /* Form Start */
 .add-item-div {

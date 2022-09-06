@@ -10,15 +10,16 @@
     <!-- Grocery Item Container Start -->
     <div class="grocery-item-container">
                 <% groceryItems.forEach( (el) => { %>
+                    <!-- groceryItemItem Container Start-->
+                    
                     <div class="grocery-item groceryItemItem" data-id='<%=el._id%>'>
-                        
+                        <input type="checkbox" class='checkbox <%= el.completed === true ? 'completed' : 'not'%>'>
                         <div class="del grocery-item-delete">
-                           <p >Delete</p>
+                           <p>Delete</p>
                         </div>
                         <div class="grocery-item-name">
-                            <input type="checkbox" class='checkbox <%= el.completed === true ? 'completed' : 'not'%>'>
                                 <h3><%= el.groceryItem %></h3></span>
-                        </div>s
+                        </div>
                      
                             <button class="increaseQuantityBtn"><img class="quanity-btn-img" src="/img/up.png"></button>
                         <p>Quantity: <%= el.quantity %></p>
@@ -26,6 +27,7 @@
                        
 
                     </div>
+                    <!-- groceryItemItem Container End-->
                 <% }) %>    
         </div>
     </div>
