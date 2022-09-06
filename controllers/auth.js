@@ -115,7 +115,7 @@ const bcrypt = require('bcrypt')
      if (validator.isEmpty(req.body.newPassword)) validationErrors.push({ msg: 'New password cannot be blank.' })
      if (validator.isEmpty(req.body.confirmNewPassword)) validationErrors.push({ msg: 'Confirm new password cannot be blank.' })
  
-     if(req.body.newPassword !== req.body.confirmNewPassword){validationErrors.push({ msg: 'New passwords are not same.' })}
+     if(req.body.newPassword !== req.body.confirmNewPassword){validationErrors.push({ msg: 'Oh-oh New Password is not the same.' })}
  
      //if one or more reset form inputs is invalid 
      if (validationErrors.length) {
