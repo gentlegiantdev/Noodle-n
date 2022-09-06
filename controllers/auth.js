@@ -59,9 +59,9 @@ const bcrypt = require('bcrypt')
   
   exports.postSignup = (req, res, next) => {
     const validationErrors = []
-    if (!validator.isEmail(req.body.email)) validationErrors.push({ msg: 'Please enter a valid email address.' })
-    if (!validator.isLength(req.body.password, { min: 8 })) validationErrors.push({ msg: 'Password must be at least 8 characters long' })
-    if (req.body.password !== req.body.confirmPassword) validationErrors.push({ msg: 'Passwords do not match' })
+    if (!validator.isEmail(req.body.email)) validationErrors.push({ msg: 'Uh-oh Please enter a valid email address.' })
+    if (!validator.isLength(req.body.password, { min: 8 })) validationErrors.push({ msg: 'Uh-oh Password must be at least 8 characters long' })
+    if (req.body.password !== req.body.confirmPassword) validationErrors.push({ msg: 'Uh-oh Passwords do not match' })
   
     if (validationErrors.length) {
       req.flash('errors', validationErrors)
@@ -81,7 +81,7 @@ const bcrypt = require('bcrypt')
     ]}, (err, existingUser) => {
       if (err) { return next(err) }
       if (existingUser) {
-        req.flash('errors', { msg: 'Account with that email address or username already exists.' })
+        req.flash('errors', { msg: 'Uh-oh Account with that email address or username already exists.' })
         return res.redirect('../signup')
       }
       user.save((err) => {
@@ -110,12 +110,12 @@ const bcrypt = require('bcrypt')
      //validating reset form inputs
      const validationErrors = []
     
-     if (!validator.isEmail(req.body.email)) validationErrors.push({ msg: 'Please enter a valid email address.' })
-     if (validator.isEmpty(req.body.password)) validationErrors.push({ msg: 'Old password cannot be blank.' })
-     if (validator.isEmpty(req.body.newPassword)) validationErrors.push({ msg: 'New password cannot be blank.' })
-     if (validator.isEmpty(req.body.confirmNewPassword)) validationErrors.push({ msg: 'Confirm new password cannot be blank.' })
+     if (!validator.isEmail(req.body.email)) validationErrors.push({ msg: 'Uh-oh Please enter a valid email address.' })
+     if (validator.isEmpty(req.body.password)) validationErrors.push({ msg: 'Uh-oh Old password cannot be blank.' })
+     if (validator.isEmpty(req.body.newPassword)) validationErrors.push({ msg: 'Uh-oh New password cannot be blank.' })
+     if (validator.isEmpty(req.body.confirmNewPassword)) validationErrors.push({ msg: 'Uh-oh Confirm new password cannot be blank.' })
  
-     if(req.body.newPassword !== req.body.confirmNewPassword){validationErrors.push({ msg: 'Oh-oh New Password is not the same.' })}
+     if(req.body.newPassword !== req.body.confirmNewPassword){validationErrors.push({ msg: 'Uh-oh New Password is not the same.' })}
  
      //if one or more reset form inputs is invalid 
      if (validationErrors.length) {
