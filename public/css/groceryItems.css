@@ -50,15 +50,21 @@
   flex-direction: row;
   align-items: center;
 }
-.quanity-btn {
-  background-color: transparent;
+.decreaseQuantityBtn, .increaseQuantityBtn {
+  background: transparent;
   border: none;
-  padding: 0.5em 1.5em;
+  padding: 0.5em 0.5em;
 }
 
 .quanity-btn-img {
   width: 2em;
 }
+
+ .decreaseQuantityBtn:hover, .increaseQuantityBtn:hover {
+    background: #277BC0;
+    transition: background 0.3s ease-in-out;
+    border-radius: 50%;
+  }
 
 /* Form Start */
 .add-item-div {
