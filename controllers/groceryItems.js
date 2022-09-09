@@ -21,6 +21,11 @@ module.exports = {
   },
   createGroceryItem: async (req, res) => {
     try {
+      //format the input value to covert text to title case and remove whitespace from both ends 
+      req.body.groceryItemItem = req.body.groceryItemItem.charAt(0).toUpperCase() + req.body.groceryItemItem.substr(1).toLowerCase();
+      req.body.groceryItemItem = req.body.groceryItemItem.trim()
+      
+
       //check for duplicate entry before creating a grocery list item
       const duplicateVal = await GroceryItem.countDocuments({userId:req.user.id, groceryItem: req.body.groceryItemItem})
       
