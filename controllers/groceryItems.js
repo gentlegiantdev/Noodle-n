@@ -21,6 +21,17 @@ module.exports = {
   },
   createGroceryItem: async (req, res) => {
     try {
+      //check for duplicate entry before creating a grocery list item
+      const duplicateVal = await GroceryItem.countDocuments({userId:req.user.id, groceryItem: req.body.groceryItemItem})
+      
+      //duplicate found
+      if(duplicateVal){
+        console.log(`Duplicate item: ${req.body.groceryItemItem}. Creation cancelled. Redirecting.`)
+        req.flash('errors',{ msg: `${req.body.groceryItemItem} is already in your list` }) //flashes error if a duplicate entry is made
+        return res.redirect('/groceryItems') //returns to the user list page
+      }
+
+      //duplicate not found
       const item = await GroceryItem.create({
         groceryItem: req.body.groceryItemItem,
         quantity: req.body.groceryItemNum,
