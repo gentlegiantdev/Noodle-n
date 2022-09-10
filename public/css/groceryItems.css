@@ -36,6 +36,12 @@
   margin: 1em 3em 3em 0;
 }
 
+.grocery-item-delete:hover, .grocery-item-delete:active {
+    color: #56a3e3;
+    border: 1px solid #56a3e3;
+    transition: 0.3s ease-in-out;
+  }
+
 .del {
   cursor: pointer;
 }
@@ -54,13 +60,14 @@
   background: transparent;
   border: none;
   padding: 0.5em 0.5em;
+  cursor: pointer;
 }
 
 .quanity-btn-img {
   width: 2em;
 }
 
- .decreaseQuantityBtn:hover, .increaseQuantityBtn:hover {
+.decreaseQuantityBtn:hover, .increaseQuantityBtn:hover {
     background: #277BC0;
     transition: background 0.3s ease-in-out;
     border-radius: 50%;
@@ -110,7 +117,16 @@ input::placeholder {
   padding: 1em 0;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
 }
+
+.submit-btn:hover, .submit-btn:active {
+  background-color: #6d6e70;
+  color: var(--white);
+  transition: 0.3s ease-in-out;
+}
+
+
 
 /* Media Queries */
 

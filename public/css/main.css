@@ -117,3 +117,37 @@ a:link {
 .not{
     text-decoration: underline;
 } */
+
+
+
+ /* ......//Landing Page//...... */
+
+.landing-page-btn-container .landing-btn, .landing-page-btn-container .landing-btn:visited {
+  background-color: #277BC0;
+  color: #fff;
+  cursor: pointer;
+}
+
+.landing-page-btn-container .landing-btn:hover, .landing-page-btn-container .landing-btn:active {
+  background-color:deepskyblue;
+  color: #fff;
+}
+
+ /* ......//Reset Page//...... */
+
+.submit-btn {
+  width: 70%;
+  background-color: var(--gray);
+  color: var(--white);
+  padding: 1em 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+.submit-btn:hover, .submit-btn:active {
+  background-color: #6d6e70;
+  color: var(--white);
+  transition: 0.3s ease-in-out;
+}

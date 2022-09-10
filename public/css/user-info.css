@@ -14,6 +14,22 @@
   justify-content: center;
 }
 
+
+.user-submit-btn {
+  background-color: #8A8A8A;;
+  color: #fff;
+  padding: 1em 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.user-submit-btn:hover, .user-submit-btn:active {
+  background-color: #6d6e70;
+  color: var(--white);
+  transition: 0.3s ease-in-out;
+}
+
 .panda-img {
   display: flex;
   flex-direction: column;
