@@ -5,6 +5,13 @@
     <div class="main-h1-div">
         <h1 class="main-h1"><%= user.userName %>'s List</h1>
         <h2 class="main-h3"><%= user.userName %> has <%= left %> items left to buy.</h2>
+        <!-- Flash error -->
+        <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
+            <div class="alert alert-danger"><%= el.msg %></div>
+            <% }) %> <% } %> <% if (locals.messages.info) { %> <% messages.info.forEach(
+            el => { %>
+            <div class="alert alert-danger"><%= el.msg %></div>
+            <% }) %> <% } %>
     </div>
     <!-- Page Title End -->
     <!-- Grocery Item Container Start -->
