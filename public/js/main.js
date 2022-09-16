@@ -1,6 +1,6 @@
 const deleteBtn = document.querySelectorAll(".del");
-const groceryItemItem = document.querySelectorAll("span.not");
-const groceryItemComplete = document.querySelectorAll("span.completed");
+const groceryItemItem = document.querySelectorAll(".check-button");
+const groceryItemComplete = document.querySelectorAll(".undo");
 const increaseQuantityBtn = document.querySelectorAll(".increaseQuantityBtn");
 const decreaseQuantityBtn = document.querySelectorAll(".decreaseQuantityBtn");
 console.log(increaseQuantityBtn);

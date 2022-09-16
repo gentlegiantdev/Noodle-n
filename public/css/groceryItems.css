@@ -26,6 +26,13 @@
   flex-direction: column;
   position: relative;
 }
+
+.completed {
+  color: grey;
+  text-decoration: line-through;
+  border: transparent;
+}
+
 .grocery-item-delete {
   /* align-self: flex-end; */
   position: absolute;
@@ -72,6 +79,40 @@
     transition: background 0.3s ease-in-out;
     border-radius: 50%;
   }
+
+.check-button img {
+  background: transparent;
+  border: none;
+  padding: 0.5em 0.5em;
+  cursor: pointer;
+   position: absolute;
+  bottom: 6em;
+  left: 1em;
+  padding: 0 2em;
+}
+
+.check-button img:hover, .check-button img:active {
+  margin-bottom: 1em;
+  margin-right: 1em;
+}
+
+.undo {
+  padding: 0.5em 0.5em;
+  cursor: pointer;
+  position: absolute;
+  bottom: 1em;
+  left: 0em;
+  padding: 0 2em;
+  font-size: 2em;
+}
+
+.undo:hover, .undo:active {
+    color: #56a3e3;
+    transition: 0.3s ease-in-out;
+  }
+
+
+
 
 /* Form Start */
 .add-item-div {
