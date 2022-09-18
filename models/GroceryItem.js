@@ -15,6 +15,10 @@ const GroceryItemSchema = new mongoose.Schema({
     type: Boolean,
     required: true,
   },
+  storeSection: {
+    type: String,
+    required: true,
+  },
   userId: {
     type: String,
     required: true

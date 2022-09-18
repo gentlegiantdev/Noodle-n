@@ -5,7 +5,7 @@ module.exports = {
   getGroceryItems: async (req, res) => {
     console.log(req.user);
     try {
-      const groceryItemItems = await GroceryItem.find({ userId: req.user.id });
+      const groceryItemItems = await GroceryItem.find({ userId: req.user.id }).collation({locale:'en',strength: 2}).sort({storeSection:1});
       const itemsLeft = await GroceryItem.countDocuments({
         userId: req.user.id,
         completed: false,
@@ -24,6 +24,10 @@ module.exports = {
       //format the input value to covert text to title case and remove whitespace from both ends 
       req.body.groceryItemItem = req.body.groceryItemItem.charAt(0).toUpperCase() + req.body.groceryItemItem.substr(1).toLowerCase();
       req.body.groceryItemItem = req.body.groceryItemItem.trim()
+
+      //do same thing to storeSection 
+      req.body.storeSection = req.body.storeSection.charAt(0).toUpperCase() + req.body.storeSection.substr(1).toLowerCase();
+      req.body.storeSection = req.body.storeSection.trim()
       
 
       //check for duplicate entry before creating a grocery list item
@@ -41,6 +45,7 @@ module.exports = {
         groceryItem: req.body.groceryItemItem,
         quantity: req.body.groceryItemNum,
         completed: false,
+        storeSection: req.body.storeSection,
         userId: req.user.id,
       });
       console.log("GroceryItem has been added!");

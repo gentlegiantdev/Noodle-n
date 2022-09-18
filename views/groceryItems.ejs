@@ -24,12 +24,17 @@
                         <div class="grocery-item-name">
                                 <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %><h3><%= el.groceryItem %></h3></span>
                         </div>
-                     
+                            
                             <button class="increaseQuantityBtn"><img class="quanity-btn-img" src="/img/up.png"></button>
                         <p class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %>Quantity: <%= el.quantity %></p>
                         <button class="decreaseQuantityBtn"><img class="quanity-btn-img" src="/img/down.png"></button>
+                        
                         <span class="check-button"><img src="/img/check-box.png"></span>
                         <span class="undo">undo</span>
+                        
+                         <div class="department">
+                                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %><p><%= el.storeSection %></p></span>
+                        </div>
                     </div>
                 <% }) %>    
         </div>
@@ -40,7 +45,24 @@
         <h3> Add New Item</h3>
         <form class="add-item-form" action="/groceryItems/createGroceryItem" method='POST'>
             <input type="text" placeholder="Enter Item Name" name='groceryItemItem'>
-            <input type="number" placeholder="Enter Quantity" min="1" name="groceryItemNum"> 
+            <input type="number" placeholder="Enter Quantity" min="1" name="groceryItemNum">
+            <div class="section-input-div">
+                <label id="section-input-label" for="store-section-select">Department</label>
+                <select name="storeSection" id="store-section-select">
+                    <option value="baking">Baking</option>
+                    <option value="beverages">Beverages</option>
+                    <option value="bulk">Bulk Foods</option>
+                    <option value="condiments">Condiments</option>
+                    <option value="dairy">Dairy</option>
+                    <option value="deli">Deli</option>
+                    <option value="frozen">Frozen Foods</option>
+                    <option value="grains-past">Grains/Pasta</option>
+                    <option value="meat">Meat</option>
+                    <option value="misc">Misc</option>
+                    <option value="produce">Produce</option>
+                    <option value="soups-canned-goods">Soups & Canned Goods</option>
+                </select>
+            </div>
             <button type="submit" class="submit-btn"><p>Submit</p></button> 
         </form>
     </div>

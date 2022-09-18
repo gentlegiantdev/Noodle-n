@@ -44,9 +44,9 @@
 }
 
 .grocery-item-delete:hover, .grocery-item-delete:active {
-    color: #56a3e3;
-    border: 1px solid #56a3e3;
-    transition: 0.3s ease-in-out;
+    background: #277BC0;
+    transition: background 0.3s ease-in-out;
+    border: 1px solid var(--white);
   }
 
 .del {
@@ -80,36 +80,44 @@
     border-radius: 50%;
   }
 
+
 .check-button img {
-  background: transparent;
   border: none;
-  padding: 0.5em 0.5em;
   cursor: pointer;
-   position: absolute;
-  bottom: 6em;
-  left: 1em;
-  padding: 0 2em;
+  padding: 0.5em;
+  position: absolute;
+  left: 20px;
+  bottom: 5em;
+  display: flex;
+  align-self: center;
+  justify-self: center;
 }
 
 .check-button img:hover, .check-button img:active {
-  margin-bottom: 1em;
-  margin-right: 1em;
+   background: #277BC0;
+    transition: background 0.3s ease-in-out;
+    border-radius: 12px;
 }
 
 .undo {
-  padding: 0.5em 0.5em;
+  padding: 0.2em 0.5em;
   cursor: pointer;
-  position: absolute;
-  bottom: 1em;
-  left: 0em;
-  padding: 0 2em;
   font-size: 2em;
+  position: absolute;
+  left: 24px;
+  bottom: 0.5em;
+  display: flex;
+  align-self: center;
+  justify-self: center;
 }
 
 .undo:hover, .undo:active {
-    color: #56a3e3;
-    transition: 0.3s ease-in-out;
+    background: #277BC0;
+    transition: background 0.3s ease-in-out;
+    border: 1px solid var(--white);
+    border-radius: 10px;
   }
+
 
 
 
@@ -143,12 +151,35 @@ input {
   padding: 1em 0;
   border: 1px solid var(--black);
   border-radius: 10px;
+  font-weight: bold;
 }
 
 input::placeholder {
   font-weight: bold;
   opacity: 0.5;
   padding: 0 1em;
+}
+
+.section-input-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#store-section-select {
+  margin: 0.5em 0;
+  padding: 1em 0;
+  border: 1px solid var(--black);
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+#section-input-label {
+  font-weight: bold;
+  font-size: 2.5em;
+  margin-right: 2em;
+  
 }
 
 .submit-btn {
