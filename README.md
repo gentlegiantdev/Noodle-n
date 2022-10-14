@@ -105,6 +105,7 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
  ---
 
 # Important Project Resources
+- [Live Site](https://noodle-n.gentlegiantdev.repl.co/)
 - [Project Repo](https://github.com/gentlegiantdev/Noodle-n)
 - [Figma Wireframe](https://www.figma.com/file/z9VpgLaMt4i8WGto3swMtw/GROCERY-STORE-APP)
 - [Conventional Commits Guidelines](https://www.conventionalcommits.org/en/v1.0.0/)
